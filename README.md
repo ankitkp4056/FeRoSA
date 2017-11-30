@@ -43,7 +43,7 @@ Contains mapping from 'Headings (in paper)' -to- 'Possible Relation' among ("C":
 ## Execution:
 
 ### Step-1: Creating the Working Directory
-Create a working directory "/ferosa".<br><br>
+Create a working directory "/ferosa".
 - Inside "/ferosa", create:<br>
  "/ferosa/code" : to contain all the items of this repository
 
@@ -53,12 +53,12 @@ Create a working directory "/ferosa".<br><br>
 
 
 ### Step-2: Downloading the Data
-1) To download the AAN(ACL Anthology Network) text_data:
+1) To download the AAN(ACL Anthology Network) text_data:<br>
 
-- Go to the Website = "http://clair.eecs.umich.edu/aan/index.php" or use the <a href="http://clair.eecs.umich.edu/aan/downloads/aandec2014.tar.gz">direct_link</a> to download the zip file.
+Go to the Website = "http://clair.eecs.umich.edu/aan/index.php" or use the <a href="http://clair.eecs.umich.edu/aan/downloads/aandec2014.tar.gz">direct_link</a> to download the zip file.<br>
 
-- Extract the contents of "aandec2014.tar.gz" which generates a folder "2014".
-- Rename "2014" to "text_data" and make sure it is placed in "/ferosa" directory.
+Extract the contents of "aandec2014.tar.gz" which generates a folder "2014".<br>
+Rename "2014" to "text_data" and make sure it is placed in "/ferosa" directory.
 
 
 2) To download the ACN(ACL Anthology Network) xml_data:
