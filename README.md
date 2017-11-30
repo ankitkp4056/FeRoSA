@@ -21,22 +21,22 @@ Examples of both experiments are described in more detail below.
 
 This is the open repository for the 'Faceted Recommendation System for Scientific Articles':
 
-1) '/Walker'
+1) '/Walker'<br>
 Contains the 'Walker' module developed by- 'Zhang H, Schaefer M, Crawford J, Kiel C, Serrano L, and Cowen LJ' and also available on this <a href="https://github.com/TuftsBCB/Walker">github_repository</a>.<br>
  
-2) '/pickled'
+2) '/pickled'<br>
 Will(..once all codes are run) contain the intermediate pickled files, which will later be used for graph-generation and paper-prediction. "The user does not specifically need to understand this directory to run experiments..!!! "
 
-3) '/cos_5k'
+3) '/cos_5k'<br>
 Similar to '/pickled'. Will contain data related to cosine-similarity of the papers. 
 
-4) '/lda_5k'
+4) '/lda_5k'<br>
 Similar to '/pickled'. Will contain data related to LDA-topic-modeling.
 
-5) '/report.pdf'
+5) '/report.pdf'<br>
 Can be used by the user for better understanding of the system architecture.
 
-6) 'section_mapping.ods'
+6) 'section_mapping.ods'<br>
 Contains mapping from 'Headings (in paper)' -to- 'Possible Relation' among ("C":comparison, "M":method, "RW":related work )
 
 
@@ -63,14 +63,13 @@ Next we will download our data in:
 
 2) To download the ACN(ACL Anthology Network) xml_data:
 
-- Go to the Website at: http://acl-arc.comp.nus.edu.sg and download the "ParsCit Structured XML(Version 20160301)" or use the following terminal command(from the "/ferosa" directory) to download all the zipped files at once.
+- Go to the Website at: http://acl-arc.comp.nus.edu.sg and download the "ParsCit Structured XML(Version 20160301)" or use the following terminal command(from the "/ferosa" directory) to download all the zipped files at once.<br>
 `wget -r -np -nH --cut-dirs=1 -R index.html http://acl-arc.comp.nus.edu.sg/archives/acl-arc-160301-parscit/` <br>
 
 - This downloads a folder "acl-arc-160301-parscit/" containing a lot of zipped files.
 
-- From inside the "acl-arc-160301-parscit/" folder use the following command to extract all the zipped files into "ferosa/xml_data" (while also stripping the leading directory of the zipped files) .
-
-- `for f in *.tgz; do tar xvzf $f --strip=1 -C ../xml_data; done ` 
+- From inside the "acl-arc-160301-parscit/" folder use the following command to extract all the zipped files into "ferosa/xml_data" (while also stripping the leading directory of the zipped files) .<br>
+`for f in *.tgz; do tar xvzf $f --strip=1 -C ../xml_data; done ` 
 
 ### Step-3: Installing dependencies/python modules
 Following python modules will be required to successfully run all the codes: 
@@ -117,10 +116,10 @@ REL_CODE = 'C' --> Comparison | 'M' --> Method | 'RE' --> Results | 'RW' --> Rel
 e.g.  `python run_walker.py A00-1009M_graph_jsd.txt graph/jsd/A00-1009_seed.txt`
 
 ## EXTRA:
-1) 'paper_array_5k.txt'
+1) 'paper_array_5k.txt'<br>
 List of papers that are available for testing (i.e. that are present in the stripped down 5k-dataset). While generating results (Step-5), only use these paper_id's.
 
-2) 'xml_prob_array.txt'
+2) 'xml_prob_array.txt'<br>
 List of papers, for which the XML file might be broken (almost 30-40 papers). I this case user might experience some XML-error while running `gen_cit_head_threading_deep.py`
 Solution-- 
            a) Manually rectify the XML files
