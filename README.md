@@ -110,19 +110,19 @@ e.g.  `python run_walker.py A00-1009M_graph_cos.txt graph/cos/A00-1009_seed.txt`
 - Note: If using the paper_id/paper_code directly(rather than the index) then make sure that code exists in "paper_array_5k.txt".
 
 2) From inside the folder "Walker/", run the command<br> `python run_walker.py <PAPER_ID><REL_CODE>_graph_jsd.txt graph/jsd/<PAPER_ID>_seed.txt`.
-Where, 
+ 
 - PAPER_ID = 8 character code available in "paper_array_5k.txt" (The mapping for paper_id and paper_name can be found in "ferosa/text_data/paper_ids.txt")<br>
 REL_CODE = 'C' --> Comparison | 'M' --> Method | 'RE' --> Results | 'RW' --> RelatedWork
 
 e.g.  `python run_walker.py A00-1009M_graph_jsd.txt graph/jsd/A00-1009_seed.txt`
 
 ## EXTRA:
-1) 'paper_array_5k.txt'<br>
+1) `paper_array_5k.txt`<br>
 List of papers that are available for testing (i.e. that are present in the stripped down 5k-dataset). While generating results (Step-5), only use these paper_id's.
 
-2) 'xml_prob_array.txt'<br>
-List of papers, for which the XML file might be broken (almost 30-40 papers). I this case user might experience some XML-error while running `gen_cit_head_threading_deep.py`
-Solution-- 
+2) `xml_prob_array.txt`<br>
+List of papers, for which the XML file might be broken (almost 30-40 papers). In this case user might experience some XML-error while running `gen_cit_head_threading_deep.py`
+- Solution-- 
            a) Manually rectify the XML files
            b) Uncomment Ln98-Ln104 in `gen_cit_head_threading_deep.py` to ignore such files
 
