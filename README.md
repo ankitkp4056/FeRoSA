@@ -43,7 +43,7 @@ Contains mapping from 'Headings (in paper)' -to- 'Possible Relation' among ("C":
 ## Execution:
 
 ### Step-1: Creating the Working Directory
-Create a working directory, say "/ferosa".
+Create a working directory "/ferosa".<br>
 Inside "/ferosa", create:
 --> "/ferosa/code" : to contain all the items of this repository
 
