@@ -44,12 +44,12 @@ Contains mapping from 'Headings (in paper)' -to- 'Possible Relation' among ("C":
 
 ### Step-1: Creating the Working Directory
 Create a working directory "/ferosa".<br><br>
-Inside "/ferosa", create:
-- "/ferosa/code" : to contain all the items of this repository
+Inside "/ferosa", create:<br>
+ "/ferosa/code" : to contain all the items of this repository
 
-Next we will download our data in:
-- "/ferosa/text_data" :to store text data of all papers
-- "/ferosa/xml_data" :to store xml data of all papers
+Next we will download our data in:<br>
+ "/ferosa/text_data" :to store text data of all papers<br>
+ "/ferosa/xml_data" :to store xml data of all papers
 
 
 ### Step-2: Downloading the Data
@@ -77,7 +77,6 @@ Following python modules will be required to successfully run all the codes:
 `sklearn numpy pandas pickle distance re ezodf timeit stop_words threading lxml nltk gensim logging`
 
 ### Step-4: Step-by-Step Execution
-------The long file names are NOT a prerequisite to run the codes, change them if you like shorter names------
 
 1) `gen_init_cit_net.py` - run to generate initial citation network. Generates incite (outcite) dictionary, where "key=paper_id, value = list of paper_id's that belong to incite (outcite) of the key"
 
@@ -94,12 +93,13 @@ Following python modules will be required to successfully run all the codes:
 ### Step-5 Generating Results
 
 #### For Cosine-similarity based prediction
-1) `generate_graph_txt_cos.py` - Change the last line/section of code to select the paper/papers for which graph is to be generated. Then run the code to generate corresponding graph file(.. and a seed file) in "Walker/graph/cos/".
-Note: If using the paper_id/paper_code directly(rather than the index) then make sure that code exists in "paper_array_5k.txt".
+1) `generate_graph_txt_cos.py` 
+- Change the last line/section of code to select the paper/papers for which graph is to be generated. Then run the code to generate corresponding graph file(.. and a seed file) in "Walker/graph/cos/".
+- Note: If using the paper_id/paper_code directly(rather than the index) then make sure that code exists in "paper_array_5k.txt".
 
 2) From inside the folder "Walker/", run the command `python run_walker.py <PAPER_ID><REL_CODE>_graph_cos.txt graph/cos/<PAPER_ID>_seed.txt`.
-Where, 
-PAPER_ID = 8 character code available in "paper_array_5k.txt" (The mapping for paper_id and paper_name can be found in "ferosa/text_data/paper_ids.txt")
+ 
+- PAPER_ID = 8 character code available in "paper_array_5k.txt" (The mapping for paper_id and paper_name can be found in "ferosa/text_data/paper_ids.txt")<br>
 REL_CODE = 'C' --> Comparison | 'M' --> Method | 'RE' --> Results | 'RW' --> RelatedWork
 
 e.g.  `python run_walker.py A00-1009M_graph_cos.txt graph/cos/A00-1009_seed.txt`
