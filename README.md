@@ -21,22 +21,22 @@ Examples of both experiments are described in more detail below.
 
 This is the open repository for the 'Faceted Recommendation System for Scientific Articles':
 
-1) '/Walker'<br>
+1) `/Walker`<br>
 Contains the 'Walker' module developed by- 'Zhang H, Schaefer M, Crawford J, Kiel C, Serrano L, and Cowen LJ' and also available on this <a href="https://github.com/TuftsBCB/Walker">github_repository</a>.<br>
  
-2) '/pickled'<br>
+2) `/pickled`<br>
 Will(..once all codes are run) contain the intermediate pickled files, which will later be used for graph-generation and paper-prediction. "The user does not specifically need to understand this directory to run experiments..!!! "
 
-3) '/cos_5k'<br>
+3) `/cos_5k`<br>
 Similar to '/pickled'. Will contain data related to cosine-similarity of the papers. 
 
-4) '/lda_5k'<br>
+4) `/lda_5k`<br>
 Similar to '/pickled'. Will contain data related to LDA-topic-modeling.
 
-5) '/report.pdf'<br>
+5) `/report.pdf`<br>
 Can be used by the user for better understanding of the system architecture.
 
-6) 'section_mapping.ods'<br>
+6) `section_mapping.ods`<br>
 Contains mapping from 'Headings (in paper)' -to- 'Possible Relation' among ("C":comparison, "M":method, "RW":related work )
 
 
@@ -44,10 +44,10 @@ Contains mapping from 'Headings (in paper)' -to- 'Possible Relation' among ("C":
 
 ### Step-1: Creating the Working Directory
 Create a working directory "/ferosa".<br><br>
-Inside "/ferosa", create:<br>
+- Inside "/ferosa", create:<br>
  "/ferosa/code" : to contain all the items of this repository
 
-Next we will download our data in:<br>
+- Next we will download our data in:<br>
  "/ferosa/text_data" :to store text data of all papers<br>
  "/ferosa/xml_data" :to store xml data of all papers
 
@@ -105,12 +105,13 @@ REL_CODE = 'C' --> Comparison | 'M' --> Method | 'RE' --> Results | 'RW' --> Rel
 e.g.  `python run_walker.py A00-1009M_graph_cos.txt graph/cos/A00-1009_seed.txt`
 
 #### For Jensen-Shannon-distance based prediction
-1) `generate_graph_txt_jsd.py` - Change the last line/section of code to select the paper/papers for which graph is to be generated. Then run the code to generate corresponding graph file(..and a seed file) in "Walker/graph/jsd/". 
-Note: If using the paper_id/paper_code directly(rather than the index) then make sure that code exists in "paper_array_5k.txt".
+1) `generate_graph_txt_jsd.py` 
+- Change the last line/section of code to select the paper/papers for which graph is to be generated. Then run the code to generate corresponding graph file(..and a seed file) in "Walker/graph/jsd/". 
+- Note: If using the paper_id/paper_code directly(rather than the index) then make sure that code exists in "paper_array_5k.txt".
 
 2) From inside the folder "Walker/", run the command `python run_walker.py <PAPER_ID><REL_CODE>_graph_jsd.txt graph/jsd/<PAPER_ID>_seed.txt`.
 Where, 
-PAPER_ID = 8 character code available in "paper_array_5k.txt" (The mapping for paper_id and paper_name can be found in "ferosa/text_data/paper_ids.txt")
+- PAPER_ID = 8 character code available in "paper_array_5k.txt" (The mapping for paper_id and paper_name can be found in "ferosa/text_data/paper_ids.txt")
 REL_CODE = 'C' --> Comparison | 'M' --> Method | 'RE' --> Results | 'RW' --> RelatedWork
 
 e.g.  `python run_walker.py A00-1009M_graph_jsd.txt graph/jsd/A00-1009_seed.txt`
