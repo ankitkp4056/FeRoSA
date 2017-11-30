@@ -64,13 +64,13 @@ Next we will download our data in:
 2) To download the ACN(ACL Anthology Network) xml_data:
 
 - Go to the Website at: http://acl-arc.comp.nus.edu.sg and download the "ParsCit Structured XML(Version 20160301)" or use the following terminal command(from the "/ferosa" directory) to download all the zipped files at once.
-
 `wget -r -np -nH --cut-dirs=1 -R index.html http://acl-arc.comp.nus.edu.sg/archives/acl-arc-160301-parscit/` <br>
-This downloads a folder "acl-arc-160301-parscit/" containing a lot of zipped files.
+
+- This downloads a folder "acl-arc-160301-parscit/" containing a lot of zipped files.
 
 - From inside the "acl-arc-160301-parscit/" folder use the following command to extract all the zipped files into "ferosa/xml_data" (while also stripping the leading directory of the zipped files) .
 
-`for f in *.tgz; do tar xvzf $f --strip=1 -C ../xml_data; done ` 
+- `for f in *.tgz; do tar xvzf $f --strip=1 -C ../xml_data; done ` 
 
 ### Step-3: Installing dependencies/python modules
 Following python modules will be required to successfully run all the codes: 
