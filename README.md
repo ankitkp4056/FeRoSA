@@ -22,10 +22,10 @@ Examples of both experiments are described in more detail below.
 This is the open repository for the 'Faceted Recommendation System for Scientific Articles':
 
 1) `/Walker`<br>
-Contains the 'Walker' module developed by- 'Zhang H, Schaefer M, Crawford J, Kiel C, Serrano L, and Cowen LJ' and also available on this <a href="https://github.com/TuftsBCB/Walker">github_repository</a>.<br>
+Contains the 'Random Walker' module developed by- 'Zhang H, Schaefer M, Crawford J, Kiel C, Serrano L, and Cowen LJ' and also available on this <a href="https://github.com/TuftsBCB/Walker">github_repository</a>.<br>
  
 2) `/pickled`<br>
-Will(..once all codes are run) contain the intermediate pickled files, which will later be used for graph-generation and paper-prediction. "The user does not specifically need to understand this directory to run experiments..!!! "
+Will contain(..once all codes are run) the intermediate pickled files, which will later be used for graph-generation and paper-prediction. "The user does not specifically need to understand this directory to run experiments..!!! "
 
 3) `/cos_5k`<br>
 Similar to '/pickled'. Will contain data related to cosine-similarity of the papers. 
@@ -122,9 +122,9 @@ List of papers that are available for testing (i.e. that are present in the stri
 
 2) `xml_prob_array.txt`<br>
 List of papers, for which the XML file might be broken (almost 30-40 papers). In this case user might experience some XML-error while running `gen_cit_head_threading_deep.py`
-- Solution-- 
-           a) Manually rectify the XML files
-           b) Uncomment Ln98-Ln104 in `gen_cit_head_threading_deep.py` to ignore such files
+- Solution<br> 
+           a) Manually rectify the XML files<br>
+           b) Uncomment "Ln 98 - Ln 104" in `gen_cit_head_threading_deep.py` to ignore broken xml files
 
 
 
