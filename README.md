@@ -44,11 +44,11 @@ Contains mapping from 'Headings (in paper)' -to- 'Possible Relation' among ("C":
 
 ### Step-1: Creating the Working Directory
 Create a working directory "/ferosa".<br>
-Inside "/ferosa", create:
+Inside "/ferosa", create:<br>
 --> "/ferosa/code" : to contain all the items of this repository
 
-Next we will download our data in:
---> "/ferosa/text_data" :to store text data of all papers
+Next we will download our data in:<br>
+--> "/ferosa/text_data" :to store text data of all papers<br>
 --> "/ferosa/xml_data" :to store xml data of all papers
 
 
