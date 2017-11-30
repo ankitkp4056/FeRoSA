@@ -1,3 +1,5 @@
+Paper_list corresponding to paper_array[0:10]
+
 A00-1009
 A00-1012
 A00-1014

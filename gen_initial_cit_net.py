@@ -6,7 +6,7 @@
 
 import os
 import pandas as pd
-paper_directory = "../2014/papers_text"
+paper_directory = "../text_data/papers_text"
 
 #paper_array = names of all papers in dataset ordered lexically
 paper_array = []
@@ -25,7 +25,7 @@ for name in paper_array:
     incite[name] = []
     outcite[name] = []
 
-acl_address = "../2014/acl.txt"
+acl_address = "../text_data/acl.txt"
 acl = open(acl_address, "r")
 lines = acl.readlines()
 for data in lines:

@@ -85,7 +85,7 @@ print facets
 
 #Loading dict_cit_head
 print '.....loading dict_cit_head from pickled..... '
-import pickle
+
 with open("pickled/dict_cit_head_5k.txt", "rb") as dict_file:
     outcite_1 = pickle.load(dict_file)
 

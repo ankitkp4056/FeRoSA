@@ -78,7 +78,7 @@ for row in network.iterrows():
 ## paper_array = names of all papers in dataset ordered lexically
 print '.....Loading/Creating paper_array..... '
 
-paper_dir = "../2014/papers_text"
+paper_dir = "../text_data/papers_text"
 paper_array_path = 'pickled/paper_array.txt'
 
 if os.path.isfile(paper_array_path):
@@ -93,20 +93,21 @@ else:
     with open(paper_array_path, "wb") as array_file:
         pickle.dump(paper_array, array_file)
 
+#### If facing problem with broken XML file then uncomment this portion to remove those papers from the list
+
 #print '.....Loading the prob_array = list of paper with broken xml..... '
-#prob_array_path = 'pickled/prob_array.txt'
+#prob_array_path = 'xml_prob_array.txt'
 #with open(prob_array_path, "rb") as array_file:
 #        prob_array = pickle.load(array_file)
-
 #print '.....removing broken xml papers from paper_array......'
 #for p in prob_array:
 #	paper_array.remove(p)
 
-# In[9]:
 
-## Generate dict from paper_ids.txt 
+
+#### Generate dict from paper_ids.txt 
 print '.....Generating dict from paper_ids.txt ..... '
-paper_ids=open("../2014/paper_ids.txt","r")
+paper_ids=open("../text_data/paper_ids.txt","r")
 dict_id={}
 for line in paper_ids:
     key=line[:8]
@@ -134,7 +135,7 @@ def gen_cit_head(outcite, outcite_1, dict_id, num_start):
     for curr_paper in list(outcite_1.keys())[num_start*500:(num_start+1)*500]:
             #print 'paper_id ='+ curr_paper
         loop_count+=1
-        doc_name = '../xml/'+curr_paper[:3]+'/'+curr_paper+'-parscit.130908'+'.xml'
+        doc_name = '../xml_data/'+curr_paper[:3]+'/'+curr_paper+'-parscit.130908'+'.xml'
         if loop_count%100 ==0:
             elapsed = timeit.default_timer() - start_time
             print '---- (thread: '+str(num_start)+')time taken for last batch '+str(loop_count-99)+'--to--'+str(loop_count)+' = ' +str(elapsed)

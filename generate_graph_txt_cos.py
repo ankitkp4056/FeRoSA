@@ -179,11 +179,14 @@ with open("pickled/dict_in_cit_facet_ml=0.2_deep_5k.txt", "rb") as dict_file:
 
 
 
-get_graph_txt(paper_array[56], outcite_2, incite_2)
+
+#### Select the paper/papers to generate graph for
+
+paper_id = 'A00-1005'
+get_graph_txt(paper_id, outcite_2, incite_2, 'C')
 
 
-# In[121]:
-
+## Use this part to generate graphs for a group of paper
 #for i in xrange(10):
 #    get_graph_txt(paper_array[i], outcite_2, incite_2,'M')
   

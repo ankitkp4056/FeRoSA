@@ -87,7 +87,7 @@ else:
 
     ## frac = 1  # fraction of data to consider
     ## print '\n ..... running the code for ' + str(frac) + ' fraction of data!'
-    paper_directory = "../2014/papers_text/"
+    paper_directory = "../text_data/papers_text/"
     filenames = [paper_directory + x + ".txt" for x in paper_array]
     doc_list = [open(f).read() for f in filenames]
     #doc_list = [open(f).read() for f in filenames[:int(len(paper_array)*frac)]]

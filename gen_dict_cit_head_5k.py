@@ -3,6 +3,8 @@ import pickle
 import numpy as np
 import pandas as pd
 
+MIN_CIT_LINKS=10
+
 print '-----Loading dict_cit_head (dictionary of citation links created from XML files)-----\n '
 with open("pickled/dict_cit_head_ml=0.2_multihead_deepdict.txt", "rb") as dict_file:
     outcite_1 = pickle.load(dict_file)
@@ -29,7 +31,7 @@ for key in outcite_1.iterkeys():
                 
 papers_to_remove =[]
 for paper in paper_array:
-    if count_incite_1[paper]+count_outcite_1[paper] < 10:
+    if count_incite_1[paper]+count_outcite_1[paper] < MIN_CIT_LINKS:
         papers_to_remove.append(paper)
 print '----- ' +str(len(papers_to_remove))+' papers have less than 10 links-----\n'
 

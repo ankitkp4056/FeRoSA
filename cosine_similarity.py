@@ -10,7 +10,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 ## Loading/Creating paper_array 
 ## paper_array = names of all papers in dataset ordered lexically
 print '.....Loading/Creating paper_array..... '
-paper_dir = "../2014/papers_text"
+paper_dir = "../text_data/papers_text"
 paper_array_path = 'pickled/paper_array.txt'
 
 if os.path.isfile(paper_array_path):
