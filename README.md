@@ -55,7 +55,7 @@ Create a working directory "/ferosa".
 ### Step-2: Downloading the Data
 1) To download the AAN(ACL Anthology Network) text_data:<br>
 
-Go to the Website = "http://clair.eecs.umich.edu/aan/index.php" or use the <a href="http://clair.eecs.umich.edu/aan/downloads/aandec2014.tar.gz">direct_link</a> to download the zip file.<br>
+- Go to the Website = "http://clair.eecs.umich.edu/aan/index.php" or use the <a href="http://clair.eecs.umich.edu/aan/downloads/aandec2014.tar.gz">direct_link</a> to download the zip file.<br>
 
 Extract the contents of "aandec2014.tar.gz" which generates a folder "2014".<br>
 Rename "2014" to "text_data" and make sure it is placed in "/ferosa" directory.
@@ -66,7 +66,7 @@ Rename "2014" to "text_data" and make sure it is placed in "/ferosa" directory.
 - Go to the Website at: http://acl-arc.comp.nus.edu.sg and download the "ParsCit Structured XML(Version 20160301)" or use the following terminal command(from the "/ferosa" directory) to download all the zipped files at once.<br>
 `wget -r -np -nH --cut-dirs=1 -R index.html http://acl-arc.comp.nus.edu.sg/archives/acl-arc-160301-parscit/` <br>
 
-- This downloads a folder "acl-arc-160301-parscit/" containing a lot of zipped files.
+This downloads a folder "acl-arc-160301-parscit/" containing a lot of zipped files.
 
 - From inside the "acl-arc-160301-parscit/" folder use the following command to extract all the zipped files into "ferosa/xml_data" (while also stripping the leading directory of the zipped files) .<br>
 `for f in *.tgz; do tar xvzf $f --strip=1 -C ../xml_data; done ` 
