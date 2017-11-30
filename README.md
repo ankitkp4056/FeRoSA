@@ -1,10 +1,10 @@
-# --FeRoSA_Readme--
+# FeRoSA: Faceted Recommendation System for Scientific Articles
 
 ## Introduction
 
--->A​ ​smart​ ​recommendation​ ​engine​ ​should​ ​be​ ​able​ ​to​ ​organize​ ​the​ ​recommended papers​ ​into​ ​multiple​ ​facets/tags​ ​such​ ​as​ ​background,​ ​alternative​ ​approaches, methods​ ​and​ ​comparison. 
+A​ ​smart​ ​recommendation​ ​engine​ ​should​ ​be​ ​able​ ​to​ ​organize​ ​the​ ​recommended papers​ ​into​ ​multiple​ ​facets/tags​ ​such​ ​as​ ​background,​ ​alternative​ ​approaches, methods​ ​and​ ​comparison. 
 
--->This module uses​ ​the​ ​AAN​ ​dataset​ ​which​ ​is​ ​an​ ​assemblage​ ​of​ ​all​ ​papers​ ​included​ ​in ACL2​ ​publication​ ​venue​ ​and​ ​categorize​ ​the​ ​citation​ ​links​ ​based​ ​on​ ​their occurrence​ ​in​ ​various​ ​sections​ ​of​ ​the​ ​paper. 
+This module uses​ ​the​ ​AAN​ ​dataset​ ​which​ ​is​ ​an​ ​assemblage​ ​of​ ​all​ ​papers​ ​included​ ​in ACL2​ ​publication​ ​venue​ ​and​ ​categorize​ ​the​ ​citation​ ​links​ ​based​ ​on​ ​their occurrence​ ​in​ ​various​ ​sections​ ​of​ ​the​ ​paper. 
 
 
 ## Overview:
@@ -43,13 +43,13 @@ Contains mapping from 'Headings (in paper)' -to- 'Possible Relation' among ("C":
 ## Execution:
 
 ### Step-1: Creating the Working Directory
-Create a working directory "/ferosa".<br>
+Create a working directory "/ferosa".<br><br>
 Inside "/ferosa", create:<br>
---> "/ferosa/code" : to contain all the items of this repository
+- "/ferosa/code" : to contain all the items of this repository
 
 Next we will download our data in:<br>
---> "/ferosa/text_data" :to store text data of all papers<br>
---> "/ferosa/xml_data" :to store xml data of all papers
+- "/ferosa/text_data" :to store text data of all papers
+- "/ferosa/xml_data" :to store xml data of all papers
 
 
 ### Step-2: Downloading the Data
