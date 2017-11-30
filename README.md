@@ -57,16 +57,16 @@ To download the AAN(ACL Anthology Network) text_data:<br>
 
 - Go to the Website = "http://clair.eecs.umich.edu/aan/index.php" or use the <a href="http://clair.eecs.umich.edu/aan/downloads/aandec2014.tar.gz">direct_link</a> to download the zip file.
 
-Extract the contents of "aandec2014.tar.gz" which generates a folder "2014".
-Rename "2014" to "text_data" and make sure it is placed in "/ferosa" directory.
+- Extract the contents of "aandec2014.tar.gz" which generates a folder "2014".
+- Rename "2014" to "text_data" and make sure it is placed in "/ferosa" directory.
 
 
-2) To download the ACN(ACL Anthology Network) xml_data:
+To download the ACN(ACL Anthology Network) xml_data:
 
 - Go to the Website at: http://acl-arc.comp.nus.edu.sg and download the "ParsCit Structured XML(Version 20160301)" or use the following terminal command(from the "/ferosa" directory) to download all the zipped files at once.<br>
 `wget -r -np -nH --cut-dirs=1 -R index.html http://acl-arc.comp.nus.edu.sg/archives/acl-arc-160301-parscit/` <br>
 
-This downloads a folder "acl-arc-160301-parscit/" containing a lot of zipped files.
+- This downloads a folder "acl-arc-160301-parscit/" containing a lot of zipped files.
 
 - From inside the "acl-arc-160301-parscit/" folder use the following command to extract all the zipped files into "ferosa/xml_data" (while also stripping the leading directory of the zipped files) .<br>
 `for f in *.tgz; do tar xvzf $f --strip=1 -C ../xml_data; done ` 
@@ -97,7 +97,7 @@ Following python modules will be required to successfully run all the codes:
 - Change the last line/section of code to select the paper/papers for which graph is to be generated. Then run the code to generate corresponding graph file(.. and a seed file) in "Walker/graph/cos/".
 - Note: If using the paper_id/paper_code directly(rather than the index) then make sure that code exists in "paper_array_5k.txt".
 
-2) From inside the folder "Walker/", run the command `python run_walker.py <PAPER_ID><REL_CODE>_graph_cos.txt graph/cos/<PAPER_ID>_seed.txt`.
+2) From inside the folder "Walker/", run the command<br> `python run_walker.py <PAPER_ID><REL_CODE>_graph_cos.txt graph/cos/<PAPER_ID>_seed.txt`.
  
 - PAPER_ID = 8 character code available in "paper_array_5k.txt" (The mapping for paper_id and paper_name can be found in "ferosa/text_data/paper_ids.txt")<br>
 REL_CODE = 'C' --> Comparison | 'M' --> Method | 'RE' --> Results | 'RW' --> RelatedWork
@@ -109,9 +109,9 @@ e.g.  `python run_walker.py A00-1009M_graph_cos.txt graph/cos/A00-1009_seed.txt`
 - Change the last line/section of code to select the paper/papers for which graph is to be generated. Then run the code to generate corresponding graph file(..and a seed file) in "Walker/graph/jsd/". 
 - Note: If using the paper_id/paper_code directly(rather than the index) then make sure that code exists in "paper_array_5k.txt".
 
-2) From inside the folder "Walker/", run the command `python run_walker.py <PAPER_ID><REL_CODE>_graph_jsd.txt graph/jsd/<PAPER_ID>_seed.txt`.
+2) From inside the folder "Walker/", run the command<br> `python run_walker.py <PAPER_ID><REL_CODE>_graph_jsd.txt graph/jsd/<PAPER_ID>_seed.txt`.
 Where, 
-- PAPER_ID = 8 character code available in "paper_array_5k.txt" (The mapping for paper_id and paper_name can be found in "ferosa/text_data/paper_ids.txt")
+- PAPER_ID = 8 character code available in "paper_array_5k.txt" (The mapping for paper_id and paper_name can be found in "ferosa/text_data/paper_ids.txt")<br>
 REL_CODE = 'C' --> Comparison | 'M' --> Method | 'RE' --> Results | 'RW' --> RelatedWork
 
 e.g.  `python run_walker.py A00-1009M_graph_jsd.txt graph/jsd/A00-1009_seed.txt`
