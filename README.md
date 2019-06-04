@@ -80,7 +80,7 @@ Following python modules will be required to successfully run all the codes:
 
 1) `gen_init_cit_net.py` - run to generate initial citation network. Generates incite (outcite) dictionary, where "key=paper_id, value = list of paper_id's that belong to incite (outcite) of the key"
 
-2) `gen_cit_head_threading_deep.py` - run to analyze the parsed xml's of the papersand generate a "dictionary-of-dictionary" type network. Here for Outer_dict, "key=paper_id, value=Inner_dict" and for Inner_dict, "key= headings (of key of Outer_dict), value = list of papers cited under the key as heading".
+2) `gen_cit_head_threading_deep.py` - run to analyze the parsed xml's of the papersand generate a "dictionary-of-dictionary" type network. Here for Outer_dict, "key=paper_id, value=Inner_dict" and for Inner_dict, "key= headings (of key of Outer_dict), value = list of papers cited under the key as heading". [If facing error please go to the end of this document]
 
 3) `gen_dict_cit_head_5k.py` - run to strip down the network size by thresholding the minimum no. of citation links for a paper to exist in the network. To change the threshold value use the MIN_CIT_LINKS var at the top of the file. By default, MIN_CIT_LINKS=10 which results in a stripped down citation network containing only 4536 papers. 
 
@@ -122,8 +122,8 @@ List of papers that are available for testing (i.e. that are present in the stri
 
 2) `xml_prob_array.txt`<br>
 List of papers, for which the XML file might be broken (almost 30-40 papers). In this case user might experience some XML-error while running `gen_cit_head_threading_deep.py`
-- Solution<br> 
-           a) Manually rectify the XML files<br>
+- Solution (only part "b")<br> 
+           a) Manually rectify the XML files (..if you have nothing better to do!)<br>
            b) Uncomment "Ln 98 - Ln 104" in `gen_cit_head_threading_deep.py` to ignore broken xml files
 
 
