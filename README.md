@@ -80,7 +80,8 @@ Following python modules will be required to successfully run all the codes:
 
 1) `gen_init_cit_net.py` - run to generate initial citation network. Generates incite (outcite) dictionary, where "key=paper_id, value = list of paper_id's that belong to incite (outcite) of the key"
 
-2) `gen_cit_head_threading_deep.py` - run to analyze the parsed xml's of the papersand generate a "dictionary-of-dictionary" type network. Here for Outer_dict, "key=paper_id, value=Inner_dict" and for Inner_dict, "key= headings (of key of Outer_dict), value = list of papers cited under the key as heading". [If facing error please go to the end of this document]
+2) `gen_cit_head_threading_deep.py` - run to analyze the parsed xml's of the papersand generate a "dictionary-of-dictionary" type network. Here for Outer_dict, "key=paper_id, value=Inner_dict" and for Inner_dict, "key= headings (of key of Outer_dict), value = list of papers cited under the key as heading". 
+###### [If facing error please go to the end of this document]
 
 3) `gen_dict_cit_head_5k.py` - run to strip down the network size by thresholding the minimum no. of citation links for a paper to exist in the network. To change the threshold value use the MIN_CIT_LINKS var at the top of the file. By default, MIN_CIT_LINKS=10 which results in a stripped down citation network containing only 4536 papers. 
 
