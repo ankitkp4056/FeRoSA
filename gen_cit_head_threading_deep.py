@@ -93,16 +93,17 @@ else:
     with open(paper_array_path, "wb") as array_file:
         pickle.dump(paper_array, array_file)
 
+#----------------------------------------------------------------------------------------------------------------#
 #### If facing problem with broken XML file then uncomment this portion to remove those papers from the list
 
-#print '.....Loading the prob_array = list of paper with broken xml..... '
-#prob_array_path = 'xml_prob_array.txt'
-#with open(prob_array_path, "rb") as array_file:
-#        prob_array = pickle.load(array_file)
-#print '.....removing broken xml papers from paper_array......'
-#for p in prob_array:
-#	paper_array.remove(p)
-
+print '.....Loading the prob_array = list of paper with broken xml..... '
+prob_array_path = 'xml_prob_array.txt'
+with open(prob_array_path, "rb") as array_file:
+       prob_array = pickle.load(array_file)
+print '.....removing broken xml papers from paper_array......'
+for p in prob_array:
+	paper_array.remove(p)
+#----------------------------------------------------------------------------------------------------------------#
 
 
 #### Generate dict from paper_ids.txt 
