@@ -121,7 +121,7 @@ e.g.  `python run_walker.py A00-1009M_graph_jsd.txt graph/jsd/A00-1009_seed.txt`
 List of papers that are available for testing (i.e. that are present in the stripped down 5k-dataset). While generating results (Step-5), only use these paper_id's.
 
 2) `xml_prob_array.txt`<br>
-List of papers, for which the XML file might be broken (almost 30-40 papers). In this case user might experience some XML-error while running `gen_cit_head_threading_deep.py`
+List of papers, for which the XML file might be broken (almost 30-40 papers). User might experience some XML-error while running `gen_cit_head_threading_deep.py`. 
 - Solution (only part "b")<br> 
            a) Manually rectify the XML files (..if you have nothing better to do!)<br>
            b) Uncomment "Ln 98 - Ln 104" in `gen_cit_head_threading_deep.py` to ignore broken xml files
