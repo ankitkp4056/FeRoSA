@@ -124,7 +124,7 @@ List of papers that are available for testing (i.e. that are present in the stri
 List of papers, for which the XML file might be broken (almost 30-40 papers). User might experience some XML-error while running `gen_cit_head_threading_deep.py`. 
 - Solution (only part "b")<br> 
            a) Manually rectify the XML files (..if you have nothing better to do!)<br>
-           b) Uncomment "Ln 98 - Ln 104" in `gen_cit_head_threading_deep.py` to ignore broken xml files
+           b) Uncomment "Ln 99 - Ln 105" in `gen_cit_head_threading_deep.py` to ignore broken xml files
 
 
 
